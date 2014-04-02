@@ -31,7 +31,14 @@
     "psr-0": {"Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-root-package-install": ["Bedrock\\Installer::addSalts"]
+    "post-install-cmd": [
+    "Bedrock\\Installer::installLanguages",
+    "Bedrock\\Installer::addSalts"
+    ],
+    "post-update-cmd": [
+    "Bedrock\\Installer::installLanguages",
+    "Bedrock\\Installer::addSalts"
+    ]
   },
   "repositories": [
     {
@@ -42,11 +49,11 @@
       "type": "package",
       "package": {
         "name": "wordpress",
-        "version": "3.8.1",
+        "version": "3.8.1.1",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/3.8.1.zip"
+          "url": "http://fi.wordpress.org/wordpress-3.8.1-fi.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -56,16 +63,40 @@
   ],
   "require": {
     "php": ">=5.3.2",
-    "wordpress": "3.8.1",
+    "wordpress": "3.8.1.1",
     "fancyguy/webroot-installer": "1.1.0",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6"
+    "wp-cli/wp-cli": "v0.14.1",
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist/advanced-custom-fields": "*",
+    "wpackagist/posts-to-posts": "1.4.x", 
+    "wpackagist-plugin/options-framework": "*",
+    "wpackagist-plugin/formidable": "*",
+    "wpackagist-plugin/debug-bar-extender": "*", 
+    "wpackagist-plugin/debug-bar-console": "*",
+    "wpackagist-plugin/debug-bar": "*",
+    "wpackagist-plugin/jonradio-multiple-themes": "*",
+    "wpackagist-plugin/wordpress-mu-domain-mapping": "*",
+    "wpackagist-plugin/wp-mail-smtp": "*",
+    "wpackagist-plugin/google-analytics-for-wordpress": "*",
+    "wpackagist-plugin/wordless": "*",
+    "wpackagist-theme/twentyfourteen": "*",
+    "wpackagist-theme/arcade-basic": "*"
   },
   "extra": {
     "installer-paths": {
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "heroku": {
+        "php-config": [
+            "post_max_size=20M"
+        ],
+        "nginx-includes": ["nginx.conf"],
+        "document-root": "web",
+        "index-document": "index.php",
+        "new-relic": true
     },
     "webroot-dir": "web/wp",
     "webroot-package": "wordpress"

@@ -1,5 +1,15 @@
 # [Bedrock](http://roots.io/wordpress-stack/)
 
+##FORK by Koodimonni
+This fork works awesomely with Dokku/Heroku in mind.
+You can see all modifications from composer.json
+What this also does:
+
+* Forces LOGIN/ADMIN to SSL in production
+* Installs Salts if they don't exist already.
+* Installs languages and sets WPLANG according to the default lang with wordpress package. Doesn't overwrite languages if they exists in app directory.
+* Setup Subdomain Multisite easily by first installing it from the dashboard and then add `WP_MULTISITE_MAIN="yourmainsite.com"` to your ENV.
+
 Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
 
 ## Quick Start
@@ -257,12 +267,6 @@ You will lose the one-command deploys and built-in integration with Composer. An
 Bedrock disables the internal WP Cron via `define('DISABLE_WP_CRON', true);`. If you keep this setting, you'll need to manually set a cron job like the following in your crontab file:
 
 `*/5 * * * * curl http://example.com/wp/wp-cron.php`
-
-## WP-CLI
-
-Bedrock works with [WP-CLI](http://wp-cli.org/) just like any other WordPress project would. Previously we required WP-CLI in our `composer.json` file as a dependency. This has been removed since WP-CLI now recommends installing it globally with a `phar` file. It also caused conflicts if you tried using a global install.
-
-The `wp` command will automatically pick up Bedrock's subdirectory install as long as you run commands from within the project's directory (or deeper). Bedrock includes a `wp-cli.yml` file that sets the `path` option to `web/wp`. Use this config file for any further [configuration](http://wp-cli.org/config/).
 
 ## Todo
 

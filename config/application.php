@@ -6,7 +6,11 @@ $webroot_dir = $root_dir . '/web';
  * Use Dotenv to set required environment variables and load .env file in root
  */
 Dotenv::load($root_dir);
-Dotenv::required(array('DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL'));
+
+/**
+ * This is not needed in Heroku & Dokku installations since ENV-vars are setted elsewhere
+ */
+//Dotenv::required(array('DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL'));
 
 /**
  * Set up our global environment constant and load its config first
@@ -39,8 +43,9 @@ $table_prefix = 'wp_';
  * Default: English
  *
  * A corresponding MO file for the chosen language must be installed to app/languages
+ * Installer::installLanguages takes care of this when using wp-package with languages
  */
-define('WPLANG', '');
+define('WPLANG', getenv('WP_LANGUAGE') ? getenv('WP_LANGUAGE') : '');
 
 /**
  * Authentication Unique Keys and Salts
