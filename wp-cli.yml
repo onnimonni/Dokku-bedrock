@@ -1,1 +1,10 @@
 path: web/wp
+
+core install:
+	url: http://wordpress.local
+	title: "Koodimonni"
+	admin_user: koodimonni
+	admin_email: onni@koodimonni.fi
+core multisite-install:
+	admin_user: koodimonni
+	admin_email: onni@koodimonni.fi

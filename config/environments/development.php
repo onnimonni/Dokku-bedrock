@@ -16,7 +16,7 @@ if (getenv('WP_MULTISITE_MAIN') && getenv('WP_MULTISITE_MAIN') != '' ) {
 	define('MULTISITE', true);
 	define('DOMAIN_CURRENT_SITE', getenv('WP_MULTISITE_MAIN'));
 
-	define('SUBDOMAIN_INSTALL', getenv('SUBDOMAIN_INSTALL') ? getenv('SUBDOMAIN_INSTALL') : true);
+	define('SUBDOMAIN_INSTALL', getenv('SUBDOMAIN_INSTALL') === 'true' ? true : false);
 
 	define('PATH_CURRENT_SITE', '/');
 	define('SITE_ID_CURRENT_SITE', 1);
