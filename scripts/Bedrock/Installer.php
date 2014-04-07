@@ -89,6 +89,9 @@ class Installer {
       }
     }
   }
+  /**
+  * Basic ENVVAR appending. Wanted to have some layers here so I can make it better in future.
+  */
   public static function appendEnv($line){
     $root = dirname(dirname(__DIR__));
     $env_file ="{$root}/.env";
