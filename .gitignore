@@ -1,6 +1,5 @@
 # WordPress
 web/wp
-web/.htaccess
 
 # WP-CLI
 db-sync
@@ -18,6 +17,7 @@ web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
 web/app/themes
 !wed/app/themes/README.txt
+web/app/languages
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
