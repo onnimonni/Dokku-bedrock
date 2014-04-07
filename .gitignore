@@ -9,6 +9,7 @@ sql-dump-*.sql
 .env
 .env.*
 !.env.example
+!.gitkeep
 
 # Application
 web/app/plugins/*
