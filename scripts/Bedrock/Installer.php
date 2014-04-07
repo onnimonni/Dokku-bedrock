@@ -101,13 +101,24 @@ class Installer {
   * Idea is to move everything out of -nested-**** folders until I find better way to manage them
   */
   public static function installPrivateThemes(Event $event){
+    $rule = "\-nested\-";
     $io = $event->getIO();
     $root = dirname(dirname(__DIR__));
     $from = "{$root}/web/app/themes/";
-    foreach (glob("{$from}\-nested\-*/") as $themebundle) {
-      $io->write($themebundle);
-      if (file_exists($themebundle) and is_dir($themebundle)) {
-        echo "kebab";
+    //Move all folders from theme folders
+    foreach (glob("{$from}{$rule}*/[0-9a-zA-Z]*") as $theme) {
+      if (is_dir($theme)) {
+        $filename = substr( $theme, strrpos( $theme, '/' )+1 );
+        if (!file_exists("{$from}{$filename}")) {
+          rename($theme, "{$from}{$filename}");
+        }
+      }
+    }
+    //Remove all private theme folders == folders matching $rule
+    foreach (glob("{$from}{$rule}*/") as $directory) {
+      if (is_dir($directory)) {
+        $io->write("Deleting private theme vcs: {$directory}");
+        exec("rm -rf {$directory}");
       }
     }
   }
