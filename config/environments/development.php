@@ -2,7 +2,7 @@
 /* Development */
 define('DB_NAME', getenv('DB_NAME'));
 define('DB_USER', getenv('DB_USER'));
-define('DB_PASSWORD', getenv('DB_PASS'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
 if (getenv('DB_PORT')) {
 	define('DB_HOST', getenv('DB_HOST').':'.getenv('DB_PORT'));
 } else {
@@ -24,6 +24,6 @@ if (getenv('WP_MULTISITE_MAIN') && getenv('WP_MULTISITE_MAIN') != '' ) {
 }
 
 define('SAVEQUERIES', true);
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 define('WP_DEBUG_LOG', true);
 define('SCRIPT_DEBUG', true);

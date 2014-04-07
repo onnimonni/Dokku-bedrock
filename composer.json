@@ -41,6 +41,9 @@
     ]
   },
   "repositories": [
+    { "type": "vcs",
+      "url": "git@bitbucket.org:ohakala/koodimonni-themes.git"
+    },
     {
       "type": "composer",
       "url": "http://wpackagist.org"
@@ -68,8 +71,8 @@
     "composer/installers": "v1.0.12",
     "wp-cli/wp-cli": "v0.14.1",
     "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist/advanced-custom-fields": "*",
-    "wpackagist/posts-to-posts": "1.4.x", 
+    "wpackagist-plugin/advanced-custom-fields": "*",
+    "wpackagist-plugin/posts-to-posts": "*", 
     "wpackagist-plugin/options-framework": "*",
     "wpackagist-plugin/formidable": "*",
     "wpackagist-plugin/debug-bar-extender": "*", 
@@ -80,8 +83,11 @@
     "wpackagist-plugin/wp-mail-smtp": "*",
     "wpackagist-plugin/google-analytics-for-wordpress": "*",
     "wpackagist-plugin/wordless": "*",
+    "wpackagist-plugin/wordpress-importer": "*",
+    "wpackagist-plugin/image-widget": "*",
     "wpackagist-theme/twentyfourteen": "*",
-    "wpackagist-theme/arcade-basic": "*"
+    "wpackagist-theme/arcade-basic": "*",
+    "koodimonni/themes": "dev-master"
   },
   "extra": {
     "installer-paths": {

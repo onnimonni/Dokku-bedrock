@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "20065598a711cb343cf39924eab49bae",
+    "hash": "ea68928d65fa5890da94bfad12320889",
     "packages": [
         {
             "name": "composer/installers",
@@ -130,6 +130,29 @@
             "description": "A composer installer for libraries that live in an application webroot.",
             "homepage": "http://fancyguy.github.com/webroot-installer/",
             "time": "2013-03-15 17:51:14"
+        },
+        {
+            "name": "koodimonni/themes",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:ohakala/koodimonni-themes.git",
+                "reference": "610842755eb6311d645dd83f4ed225fae7c224a4"
+            },
+            "type": "wordpress-theme",
+            "authors": [
+                {
+                    "name": "Onni Hakala",
+                    "email": "onni@koodimonni.fi",
+                    "homepage": "http://koodimonni.fi"
+                }
+            ],
+            "description": "Private wordpress themes repository of Koodimonni projects.",
+            "homepage": "www.koodimonni.fi",
+            "keywords": [
+                "wordpress-theme"
+            ],
+            "time": "2014-04-02 10:16:19"
         },
         {
             "name": "mustache/mustache",
@@ -515,6 +538,29 @@
             "time": "2014-02-28 15:47:44"
         },
         {
+            "name": "wpackagist-plugin/advanced-custom-fields",
+            "version": "4.3.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/advanced-custom-fields": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/advanced-custom-fields/"
+        },
+        {
             "name": "wpackagist-plugin/debug-bar",
             "version": "0.8.1",
             "source": {
@@ -630,6 +676,29 @@
             "homepage": "http://wordpress.org/plugins/google-analytics-for-wordpress/"
         },
         {
+            "name": "wpackagist-plugin/image-widget",
+            "version": "4.0.8",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/image-widget/",
+                "reference": "tags/4.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/image-widget.4.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/image-widget": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/image-widget/"
+        },
+        {
             "name": "wpackagist-plugin/jonradio-multiple-themes",
             "version": "4.8",
             "source": {
@@ -676,6 +745,29 @@
             "homepage": "http://wordpress.org/plugins/options-framework/"
         },
         {
+            "name": "wpackagist-plugin/posts-to-posts",
+            "version": "1.6.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/posts-to-posts/",
+                "reference": "tags/1.6.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/posts-to-posts.1.6.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/posts-to-posts": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/posts-to-posts/"
+        },
+        {
             "name": "wpackagist-plugin/wordless",
             "version": "0.3",
             "source": {
@@ -697,6 +789,29 @@
             },
             "type": "wordpress-plugin",
             "homepage": "http://wordpress.org/plugins/wordless/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "replace": {
+                "wpackagist/wordpress-importer": "self.version"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "http://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-plugin/wordpress-mu-domain-mapping",
@@ -783,46 +898,6 @@
             },
             "type": "wordpress-theme",
             "homepage": "http://wordpress.org/themes/twentyfourteen/"
-        },
-        {
-            "name": "wpackagist/advanced-custom-fields",
-            "version": "4.3.5",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/advanced-custom-fields.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/advanced-custom-fields/"
-        },
-        {
-            "name": "wpackagist/posts-to-posts",
-            "version": "1.4.3",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/posts-to-posts/",
-                "reference": "tags/1.4.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/posts-to-posts.1.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "http://wordpress.org/plugins/posts-to-posts/"
         }
     ],
     "packages-dev": [
@@ -832,9 +907,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "koodimonni/themes": 20
+    },
     "platform": {
         "php": ">=5.3.2"
     },
