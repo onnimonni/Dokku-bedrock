@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ea68928d65fa5890da94bfad12320889",
+    "hash": "84270ea26f566cfdbe72b4de2d161eeb",
     "packages": [
         {
             "name": "composer/installers",
@@ -137,9 +137,9 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:ohakala/koodimonni-themes.git",
-                "reference": "610842755eb6311d645dd83f4ed225fae7c224a4"
+                "reference": "637344523311a130c5e879e14e305dc50c2368de"
             },
-            "type": "wordpress-theme",
+            "type": "wordpress-theme-bundle",
             "authors": [
                 {
                     "name": "Onni Hakala",
@@ -152,7 +152,7 @@
             "keywords": [
                 "wordpress-theme"
             ],
-            "time": "2014-04-02 10:16:19"
+            "time": "2014-04-07 20:35:07"
         },
         {
             "name": "mustache/mustache",

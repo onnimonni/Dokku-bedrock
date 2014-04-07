@@ -33,11 +33,13 @@
   "scripts": {
     "post-install-cmd": [
     "Bedrock\\Installer::installLanguages",
-    "Bedrock\\Installer::addSalts"
+    "Bedrock\\Installer::addSalts",
+    "Bedrock\\Installer::installPrivateThemes"
     ],
     "post-update-cmd": [
     "Bedrock\\Installer::installLanguages",
-    "Bedrock\\Installer::addSalts"
+    "Bedrock\\Installer::addSalts",
+    "Bedrock\\Installer::installPrivateThemes"
     ]
   },
   "repositories": [
@@ -93,7 +95,8 @@
     "installer-paths": {
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      "web/app/themes/{$name}/": ["type:wordpress-theme"],
+      "web/app/themes/-nested-{$name}": ["type:wordpress-theme-bundle"]
     },
     "heroku": {
         "php-config": [

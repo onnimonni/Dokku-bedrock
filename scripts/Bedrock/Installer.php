@@ -97,4 +97,18 @@ class Installer {
     $env_file ="{$root}/.env";
     file_put_contents($env_file, "\n{$line}\n", FILE_APPEND | LOCK_EX);
   }
+  /**
+  * Idea is to move everything out of -nested-**** folders until I find better way to manage them
+  */
+  public static function installPrivateThemes(Event $event){
+    $io = $event->getIO();
+    $root = dirname(dirname(__DIR__));
+    $from = "{$root}/web/app/themes/";
+    foreach (glob("{$from}\-nested\-*/") as $themebundle) {
+      $io->write($themebundle);
+      if (file_exists($themebundle) and is_dir($themebundle)) {
+        echo "kebab";
+      }
+    }
+  }
 }
