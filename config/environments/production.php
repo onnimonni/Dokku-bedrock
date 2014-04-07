@@ -15,6 +15,9 @@ define('WP_ALLOW_MULTISITE', true);
 if (getenv('WP_MULTISITE_MAIN') && getenv('WP_MULTISITE_MAIN') != '' ) {
 	define('MULTISITE', true);
 	define('DOMAIN_CURRENT_SITE', getenv('WP_MULTISITE_MAIN'));
+
+	define('SUBDOMAIN_INSTALL', getenv('SUBDOMAIN_INSTALL') ? getenv('SUBDOMAIN_INSTALL') : true);
+
 	define('PATH_CURRENT_SITE', '/');
 	define('SITE_ID_CURRENT_SITE', 1);
 	define('BLOG_ID_CURRENT_SITE', 1);

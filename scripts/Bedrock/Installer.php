@@ -36,15 +36,15 @@ class Installer {
 
     //Check if file exists and doesn't have salts yet
     if (file_exists($env_file) && strlen(strpos(file_get_contents($env_file),self::$KEYS[0])) == 0) {
-      file_put_contents($env_file, implode($salts, "\n"), FILE_APPEND | LOCK_EX);
+      Installer::appendEnv(implode($salts, "\n"));
       $io->write(".env found without salts. Appended salts");
     } elseif (!file_exists($env_file) && file_exists("{$root}/.env.template")) {
       copy("{$root}/.env.template", $env_file);
-      file_put_contents($env_file, implode($salts, "\n"), FILE_APPEND | LOCK_EX);
+      Installer::appendEnv(implode($salts, "\n"));
       $io->write("Appending salts to Template");
     } elseif (!file_exists($env_file)) {
       $io->write("No Template found. Writing a new .env file");
-      file_put_contents($env_file, implode($salts, "\n"), FILE_APPEND | LOCK_EX);
+      Installer::appendEnv(implode($salts, "\n"));
     }
   }
 
@@ -80,7 +80,7 @@ class Installer {
         $io->write("Searching languagefile with: {$to}/{??_??,???,??}.mo");
         foreach (glob("{$to}/{??_??,???,??}.mo", GLOB_BRACE) as $languagefile) {
           $language = substr($languagefile, strlen($to)+1, -3); //cut out directory and .mo
-          file_put_contents($env_file, "\nWP_LANGUAGE={$language}\n", FILE_APPEND | LOCK_EX);
+          Installer::appendEnv("WP_LANGUAGE={$language}");
           $io->write("And added WP_LANGUAGE={$language}");
         }
       } else {
@@ -88,5 +88,10 @@ class Installer {
 
       }
     }
+  }
+  public static function appendEnv($line){
+    $root = dirname(dirname(__DIR__));
+    $env_file ="{$root}/.env";
+    file_put_contents($env_file, "\n{$line}\n", FILE_APPEND | LOCK_EX);
   }
 }

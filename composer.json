@@ -93,7 +93,7 @@
         "php-config": [
             "post_max_size=20M"
         ],
-        "nginx-includes": ["nginx.conf"],
+        "nginx-includes": ["nginx-ms-subdomain.conf"],
         "document-root": "web",
         "index-document": "index.php",
         "new-relic": true
