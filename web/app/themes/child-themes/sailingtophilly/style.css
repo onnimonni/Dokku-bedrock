@@ -1,0 +1,16 @@
+/*
+ Theme Name:   Sailing to Phillies
+ Theme URI:    http://sailing.wordpress.koodimonni.fi;
+ Description:  Arcade basic child theme
+ Author:       Koodimonni
+ Author URI:   http://koodimonni.fi
+ Template:     arcadebasic
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, sass
+ Text Domain:  sailing-to-phillies
+*/
+
+@import url("../../arcade-basic/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */

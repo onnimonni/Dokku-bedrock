@@ -16,13 +16,16 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
-web/app/themes/
-!web/app/themes/child-themes/*
 web/app/languages
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 !web/app/mu-plugins/register-theme-directory.php
+
+# Include child-themes but exclude everything else in themes
+!web/app/themes
+web/app/themes/*
+!web/app/themes/child-themes/
 
 # Vendor (e.g. Composer)
 vendor/*
