@@ -17,9 +17,8 @@ web/app/plugins/*
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
 web/app/themes
-!wed/app/themes/README.txt
+!wed/app/themes/child-themes
 web/app/languages
-!child-[0-9a-zA-Z]*
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
