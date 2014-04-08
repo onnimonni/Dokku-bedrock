@@ -19,7 +19,7 @@ web/app/mu-plugins/*
 web/app/themes
 !wed/app/themes/README.txt
 web/app/languages
-!web/app/languages/child-*
+!child-*
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
