@@ -13,3 +13,17 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
+#footer #koodimonni_logo {
+	height: 50px;
+	padding-right: 10px;
+	float: right;
+}
+
+#footer .credit-link {
+	margin: 10px;
+}
+
+#footer .pull-left {
+	padding-top: 16px;
+}
