@@ -16,7 +16,7 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
-web/app/themes
+web/app/themes/
 !web/app/themes/child-themes/*
 web/app/languages
 web/app/upgrade
