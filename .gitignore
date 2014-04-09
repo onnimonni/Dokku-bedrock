@@ -14,7 +14,7 @@ sql-dump-*.sql
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-web/app/mu-plugins/*
+!web/app/mu-plugins/
 !web/app/mu-plugins/.gitkeep
 web/app/languages
 web/app/upgrade
