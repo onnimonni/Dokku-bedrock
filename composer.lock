@@ -137,7 +137,7 @@
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:ohakala/koodimonni-themes.git",
-                "reference": "316780aad114abf3df6101fd66715e23fa152c4a"
+                "reference": "b0f6388dff0c58ab25c13fd2996fccb90c30c8f2"
             },
             "type": "wordpress-theme-bundle",
             "authors": [
@@ -152,7 +152,7 @@
             "keywords": [
                 "wordpress-theme"
             ],
-            "time": "2014-04-09 10:06:28"
+            "time": "2014-04-09 10:49:21"
         },
         {
             "name": "mustache/mustache",

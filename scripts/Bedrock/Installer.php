@@ -105,7 +105,7 @@ class Installer {
     $io = $event->getIO();
     $root = dirname(dirname(__DIR__));
     $from = "{$root}/web/app/themes/";
-    //Move all folders from theme folders
+    //Move all folders from theme folders and overwrite earlier themes
     foreach (glob("{$from}{$rule}*/[0-9a-zA-Z]*") as $theme) {
       if (is_dir($theme)) {
         $filename = substr( $theme, strrpos( $theme, '/' )+1 );
