@@ -109,15 +109,17 @@ class Installer {
     foreach (glob("{$from}{$rule}*/[0-9a-zA-Z]*") as $theme) {
       if (is_dir($theme)) {
         $filename = substr( $theme, strrpos( $theme, '/' )+1 );
-        if (!file_exists("{$from}{$filename}")) {
-          rename($theme, "{$from}{$filename}");
+        if (file_exists("{$from}{$filename}")) {
+          $io->write("overwriting theme from vcs: {$filename}");
+          exec("rm -rf {$from}{$filename}");
         }
+        rename($theme, "{$from}{$filename}");
       }
     }
     //Remove all private theme folders == folders matching $rule
     foreach (glob("{$from}{$rule}*/") as $directory) {
       if (is_dir($directory)) {
-        $io->write("Deleting private theme vcs: {$directory}");
+        $io->write("Deleting private theme-bundle vcs: {$directory}");
         exec("rm -rf {$directory}");
       }
     }
