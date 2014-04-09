@@ -8,8 +8,9 @@ if (getenv('DB_PORT')) {
 } else {
 	define('DB_HOST', 'localhost');
 }
-define('WP_HOME', getenv('WP_HOME'));
-define('WP_SITEURL', getenv('WP_SITEURL'));
+
+define('WP_HOME',(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://".$_SERVER['HTTP_HOST'] : "http://".$_SERVER['HTTP_HOST']);
+define('WP_SITEURL', WP_HOME.'/wp');
 
 define('WP_ALLOW_MULTISITE', true);
 if (getenv('WP_MULTISITE_MAIN') && getenv('WP_MULTISITE_MAIN') != '' ) {
