@@ -67,6 +67,11 @@ define('DISABLE_WP_CRON', true);
 define('DISALLOW_FILE_EDIT', true);
 
 /**
+ * MU DOMAINS
+ */
+define( 'SUNRISE', 'on' );
+
+/**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
