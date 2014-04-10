@@ -10,6 +10,7 @@ sql-dump-*.sql
 .env.*
 !.env.example
 !.gitkeep
+*.sql
 
 # Lockfile, not sure is this needed. Slows the workflow.
 composer.lock
