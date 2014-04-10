@@ -11,6 +11,9 @@ sql-dump-*.sql
 !.env.example
 !.gitkeep
 
+# Lockfile, not sure is this needed. Slows the workflow.
+composer.lock
+
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
